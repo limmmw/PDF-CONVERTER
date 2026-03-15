@@ -18,12 +18,12 @@ Program Python untuk mengonversi file **Gambar**, **Word**, dan **Excel** ke PDF
 
 ```bash
 bash install_deps.sh
+python3 convert2pdf.py --cek-deps
 ```
 
-Atau manual:
+Jika gagal saat menginstall dependensi python, install secara manual
 ```bash
-sudo apt install libreoffice imagemagick python3-pip
-pip3 install Pillow reportlab
+pip3 install Pillow reportlab --break-system-packages
 ```
 
 ---
@@ -32,34 +32,34 @@ pip3 install Pillow reportlab
 
 ### Konversi 1 file
 ```bash
-python3 convert_to_pdf.py foto.jpg
-python3 convert_to_pdf.py laporan.docx
-python3 convert_to_pdf.py data.xlsx
+python3 convert2pdf.py foto.jpg
+python3 convert2pdf.py laporan.docx
+python3 convert2pdf.py data.xlsx
 ```
 
 ### Tentukan folder output
 ```bash
-python3 convert_to_pdf.py laporan.docx -o ~/Dokumen/PDF
+python3 convert2pdf.py laporan.docx -o ~/Dokumen/PDF
 ```
 
 ### Konversi beberapa file sekaligus
 ```bash
-python3 convert_to_pdf.py foto.jpg laporan.docx data.xlsx -o ./output
+python3 convert2pdf.py foto.jpg laporan.docx data.xlsx -o ./output
 ```
 
 ### Konversi seluruh isi folder
 ```bash
-python3 convert_to_pdf.py ./folder_input -o ./folder_output
+python3 convert2pdf.py ./folder_input -o ./folder_output
 ```
 
 ### Konversi folder + subfolder (rekursif)
 ```bash
-python3 convert_to_pdf.py ./folder_input -o ./folder_output --rekursif
+python3 convert2pdf.py ./folder_input -o ./folder_output --rekursif
 ```
 
 ### Cek dependensi saja
 ```bash
-python3 convert_to_pdf.py --cek-deps
+python3 convert2pdf.py --cek-deps
 ```
 
 ---
