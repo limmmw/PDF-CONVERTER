@@ -115,3 +115,22 @@ options:
   ✔  Berhasil : 2
   📁 Output  : /home/user/pdf_output
 ```
+
+## Buat Symlink (OPSIONAL)
+Agar program dapat dijalankan dimanapun tanpa harus membuka direktori projek
+
+```bash
+sudo ln -s /home/username/folder/to/PDF-CONVERTER/convert2pdf.py /usr/local/bin/pdf2pdf
+```
+Kemudin jalankan di direktori manapun:
+```bash
+pdf2pdf --cek-deps
+```
+Jika terdapat error, jalankan:
+```bash
+sed -i 's/\r//' ~/folder/to/PDF-CONVERTER/convert2pdf.py
+```
+lalu jalankan ulang
+```bash
+pdf2pdf file.docx -o .
+```
